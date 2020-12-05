@@ -13,10 +13,9 @@ values = STDIN.read.split.map(&:to_i)
 values.each do |value|
   complement = target - value
   if complements.include?(value)
-    puts "found: #{complement} * #{value} = #{value*(target-value)}"
+    puts "found: #{complement} * #{value} = #{value * (target - value)}"
     break
   else
     complements << complement
   end
 end
-
